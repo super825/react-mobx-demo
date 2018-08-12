@@ -1,0 +1,30 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "baseDir": "src",
+        "typeRoots": ["typings"],
+        "module": "commonjs",
+        "outDir": "dist",
+        "jsx": "react",
+        "target": "es5",
+        "lib": ["es6", "dom"],
+        "charset": 'utf8',
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "strictNullChecks": true,
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "noEmitOnError": true,
+        "skipLibCheck": true,
+        "experimentalDecorators": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
