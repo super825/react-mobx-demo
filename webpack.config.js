@@ -73,7 +73,12 @@ var config = {
         new OpenBrowserPlugin({
             url: 'http://localhost:8080'
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('production')
+            }
+        })
     ],
     //在html页面中使用script标签引入库，而不是打包到*.bundle.js文件中
     externals: {
@@ -98,21 +103,5 @@ var config = {
         port: 8080
     }
 };
-
-//如果是生产环境，要最小化压缩js文件
-if (env === 'production') {
-    //打包时对js文件进行最小化压缩
-    config.plugins.push(new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        }
-    }));
-    //消除压缩后的文件在界面引用时发出的警告
-    config.plugins.push(new webpack.DefinePlugin({
-        'process.env': {
-            NODE_ENV: JSON.stringify('production')
-        }
-    }));
-}
 
 module.exports = config;

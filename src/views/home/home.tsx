@@ -29,11 +29,11 @@ export class Home extends BaseComponent<any, any>{
                         </p>
                     </video>
                 </div>
-                <div className="home-bulletin">公告</div>
+                <div className="home-bulletin">通知</div>
                 <div className="home-menu">菜单</div>
-                <div className="home-promotion">促销产品</div>
-                <div className="home-hot">热销产品</div>
-                <div className="home-new">最新产品</div>
+                <div className="home-promotion">脱销抢购</div>
+                <div className="home-hot">热卖单品</div>
+                <div className="home-new">新品上架</div>
             </div>
         );
     }
